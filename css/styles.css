@@ -155,9 +155,10 @@ body {
       rgba(46, 47, 66, 0.7)
     ),
     url(/images/people-office.jpg);
+  max-width: 1440px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1440px;
+  background-size: cover;
 }
 
 .first-section-name {
@@ -184,6 +185,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  /* transition зі значенням background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .first-section-button:hover,
 .first-section-button:focus {
@@ -227,10 +229,10 @@ flex-shrink: 0;
 border-radius: 4px;
 border: 1px solid var(--LIGHT-SLATE, #8E8F99);
 background: var(--CLOUD, #F4F4FD); */
-.second-section-icon {
+/* .second-section-icon {
   width: 64px;
   height: 64px;
-}
+} */
 
 /*========= third section====== */
 
