@@ -72,6 +72,8 @@ body {
 /* logotipy and navigation */
 .main-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-header-container {
   display: flex;
@@ -118,10 +120,30 @@ body {
 .menu-link:focus {
   color: #404bbf;
 }
-.menu-link:hover::after,
-.menu-link:focus::after {
+.menu-item {
+  position: relative;
 }
 
+.menu-item:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+  display: block;
+}
+/* .menu-item:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+  display: block;
+} */
 .contacts-container {
   display: flex;
   gap: 40px;
@@ -131,21 +153,13 @@ body {
 }
 .contacts-menu-link {
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-menu-link:hover,
 .contacts-menu-link:focus {
   color: #404bbf;
 }
-.menu-item:hover::after
-/* .menu-item:focus::after???  */ {
-  content: "";
-  width: auto;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #404bbf;
-  display: block;
-  /* position: absolute; */
-}
+
 /* =======first section =======*/
 .first-section {
   background: #2e2f42;
@@ -185,7 +199,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* transition зі значенням background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .first-section-button:hover,
 .first-section-button:focus {
@@ -258,6 +272,8 @@ background: var(--CLOUD, #F4F4FD); */
   text-align: center;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-list-item-name {
   padding: 32px 0;
@@ -280,11 +296,7 @@ background: var(--CLOUD, #F4F4FD); */
   display: flex;
   gap: 24px;
 }
-.social-media-icon {
-  width: 16px;
-  height: 16px;
-  /* fill: #4d5ae5; */
-}
+
 .third-section-list-icon {
   display: flex;
   justify-content: center;
@@ -299,15 +311,20 @@ background: var(--CLOUD, #F4F4FD); */
   background-color: #4d5ae5;
 }
 .third-section-item-icon-link {
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .third-section-item-icon-link:hover,
 .third-section-item-icon-link:focus {
   background-color: #404bbf;
+  border-radius: 50%;
+}
+.icons-fill {
+  fill: #f4f4fd;
 }
 /* =======fourth section: Portfolio =======*/
 .section-portfolio-title {
