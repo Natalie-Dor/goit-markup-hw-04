@@ -117,14 +117,15 @@ body {
   padding-bottom: 24px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  /* цей колір мав би бути при фокусі, ховері */
-  color: #404bbf;
 }
 .menu-link:hover,
 .menu-link:focus {
   color: #404bbf;
 }
-.menu-link::after {
+.current {
+  color: #404bbf;
+}
+.current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -186,7 +187,8 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/people-office.jpg);
+    url(../images/people-office.jpg);
+
   max-width: 1440px;
   background-repeat: no-repeat;
   background-position: center;
